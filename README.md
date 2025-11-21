@@ -1,6 +1,3 @@
-# Machine-Learning-in-Mechanics
-Aplicação de Machine Learning (Regressão Logística) para classificar materiais de cilindros (Aço vs. Alumínio) com base em dados experimentais de Física
-
 # 🧪 Classificação de Materiais em Plano Inclinado: Uma Abordagem de Machine Learning
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
