@@ -47,7 +47,7 @@ Utilizando **Pandas**, os dados brutos passaram por diversas transformações:
 A análise inicial revelou que a distinção entre os materiais não é trivial apenas olhando para os tempos brutos, devido à variância experimental entre os grupos.
 
 ![Boxplot dos Grupos](images/boxplot_variancia_grupos.png)
-*Figura 1: Variabilidade das medições de tempo entre os diferentes grupos de coleta.*
+*Figura 1: Variabilidade das medições de tempo entre os diferentes alunosde um mesmo grupo de coleta.*
 
 ### 2. Performance do Modelo (Regressão Logística)
 O modelo foi avaliado utilizando dados de teste (30% do dataset). Abaixo, a Matriz de Confusão ilustra os acertos e erros por classe:
