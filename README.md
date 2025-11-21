@@ -24,6 +24,7 @@ Teoricamente, cilindros de materiais diferentes (com mesma geometria) deveriam l
 
 ---
 
+
 ## 🗂️ Pipeline de Dados
 
 O projeto seguiu um fluxo de trabalho (pipeline) rigoroso de Ciência de Dados:
@@ -40,12 +41,27 @@ Utilizando **Pandas**, os dados brutos passaram por diversas transformações:
 - **Tidy Data:** Transformação do dataset de formato "largo" (colunas por aluno) para formato "longo" (uma observação por linha) usando `pd.melt`.
 - **Engenharia de Atributos:** Cálculo das velocidades médias experimentais.
 
-*Exemplo de transformação dos dados:*
-```python
-# Transformando o dataset para o formato Tidy (Long)
-df_melted = df_bruto.melt(
-    id_vars=["Medida", "Grupo", "Material"],
-    value_vars=["Aluno 1", "Aluno 2", "Aluno 3"],
-    var_name="Aluno",
-    value_name="Tempo"
-)
+## 📊 Análise de Resultados
+
+### 1. Exploração dos Dados
+A análise inicial revelou que a distinção entre os materiais não é trivial apenas olhando para os tempos brutos, devido à variância experimental entre os grupos.
+
+![Boxplot dos Grupos](images/boxplot_variancia_grupos.png)
+*Figura 1: Variabilidade das medições de tempo entre os diferentes grupos de coleta.*
+
+### 2. Performance do Modelo (Regressão Logística)
+O modelo foi avaliado utilizando dados de teste (30% do dataset). Abaixo, a Matriz de Confusão ilustra os acertos e erros por classe:
+
+![Matriz de Confusão](images/matriz_confusao.png)
+
+**Métricas Detalhadas:**
+
+| Classe | Precision | Recall | F1-Score |
+| :--- | :---: | :---: | :---: |
+| **Aço (0)** | 0.64 | 0.58 | 0.61 |
+| **Alumínio (1)** | 0.62 | 0.67 | 0.64 |
+| **Acurácia Total** | | | **62%** |
+
+> *Nota: A performance moderada (62%) no Grupo 1 reflete a presença de ruído nas medições manuais. Em grupos com coleta mais rigorosa (ex: Grupo 6), o mesmo pipeline atingiu >90% de acurácia, demonstrando a importância da qualidade dos dados na física experimental.*
+
+
