@@ -7,7 +7,7 @@
 
 ## 📌 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte da disciplina de **Física 1 (Ciências Moleculares)** da Universidade de São Paulo (USP). O objetivo foi unir a **Mecânica Clássica** com **Ciência de Dados** para analisar o movimento de rolamento de cilindros em um plano inclinado.
+Este projeto foi desenvolvido como parte da disciplina de **Física 1 (Ciências Moleculares)** da Universidade de São Paulo (USP), mininstrada pelo Prof. Dr. Caetano Miranda. O objetivo foi unir a **Mecânica Clássica** com **Ciência de Dados** para analisar o movimento de rolamento de cilindros em um plano inclinado.
 
 Utilizamos dados experimentais coletados por diferentes grupos para treinar um modelo de **Machine Learning (Regressão Logística)** capaz de classificar se um cilindro é feito de **Aço** ou **Alumínio** com base apenas no tempo de descida e nas características físicas do experimento.
 
